@@ -1,10 +1,18 @@
 import React from 'react'
+import VideoPage from './page/videoPage'
+import TitlePage from './page/titlePage'
+import IntroducePage from './page/introducePage'
+import ContactPage from './page/contactPage'
 
 const Welcome = () => {
     return (
         <div>
-            <h2>main</h2>
+            <VideoPage/>
+            <TitlePage/>
+            <IntroducePage/>
+            <ContactPage/>
         </div>
+        
     )
 }
 
