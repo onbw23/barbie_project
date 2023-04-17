@@ -4,7 +4,7 @@ import TitlePage from './page/titlePage'
 import IntroducePage from './page/introducePage'
 import ContactPage from './page/contactPage'
 
-const Welcome = () => {
+const MainPage = () => {
     return (
         <div>
             <VideoPage/>
@@ -16,4 +16,4 @@ const Welcome = () => {
     )
 }
 
-export default Welcome
+export default MainPage
