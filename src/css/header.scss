@@ -1,10 +1,39 @@
+// Break Point
+$tablet: 768px;
+$laptop: 1020px;
+$desktop: 1400px;
+
+// Mixins
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+      @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: #{$laptop}) {
+        @content;
+    }
+} 
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
 .header {
-    padding:0.5% 0;
-    font-size:1.25rem;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    @include laptop {
+        font-size: 1.4rem;
+    }
+    @include desktop {
+        font-size: 1.6rem;
+    }
     background-color:#3d414c;
     text-align:center;
     color:#fff;
     margin: 0 auto;
-    max-width: 1920px;
-    width: 100%;
+    // max-width: 1920px;
+    width: calc(100% - 60px);
+    // height: ;
 }

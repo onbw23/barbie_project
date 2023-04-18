@@ -3,8 +3,11 @@
   src: url('../public/fonts/NotoSansKR-Regular.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-size: 62.5%;
 }
 
 body {
   font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
