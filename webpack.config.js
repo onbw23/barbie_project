@@ -8,6 +8,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     module: {
+        devtool: false,
         rules: [
             {
                 test: /\.js$/i,

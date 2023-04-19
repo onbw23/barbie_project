@@ -22,7 +22,10 @@ $desktop: 1400px;
 
 .header {
     padding: 20px 30px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    @include tablet {
+        font-size: 1.2rem;
+    }
     @include laptop {
         font-size: 1.4rem;
     }
