@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import ReactPlayer from 'react-player'
 import 'css/page.scss'
 
-const VideoPage = () => {
+const VideoPage = forwardRef((props, ref) => {
     return (
-        <div className='video-area'>
+        <div ref={ref} className='video-area'>
             <div className='video-page'>
                 <ReactPlayer
                     className='react-player'
@@ -22,6 +22,6 @@ const VideoPage = () => {
         </div>
         
     )
-}
+})
 
 export default VideoPage

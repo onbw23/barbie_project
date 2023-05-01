@@ -1,11 +1,11 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 
-const IntroducePage = () => {
+const IntroducePage = forwardRef((props, ref) => {
     return (
-        <div className='introduce-page'>
+        <div ref={ref} className='introduce-page'>
             <span className='introduce-item'>INTRODUCE PAGE</span>
         </div>
     )
-}
+})
 
 export default IntroducePage
