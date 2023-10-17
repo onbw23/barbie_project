@@ -1,0 +1,94 @@
+// Break Point
+$tablet: 768px;
+$laptop: 1020px;
+$desktop: 1400px;
+
+// Mixins
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+      @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: #{$laptop}) {
+        @content;
+    }
+} 
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+.manager-card {
+    display: flex;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    width: 25rem;
+    @include tablet {
+        width: 30rem;
+    }
+    @include laptop {
+        width: 35rem;
+    }
+  }
+  
+  .manager-details {
+    padding: 16px;
+    text-align: left;
+  }
+  
+  .manager-image {
+    width: 10rem;
+    @include tablet {
+        width: 12rem;
+    }
+    @include laptop {
+        width: 15rem;
+    }
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .manager-name {
+    font-size: 1.5rem;
+    @include tablet {
+        font-size: 1.5rem;
+    }
+    @include laptop {
+        font-size: 2rem;
+    }
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .manager-title {
+    font-size: 1rem;
+    @include tablet {
+        font-size: 1rem;
+    }
+    @include laptop {
+        font-size: 1.5rem;
+    }
+    color: #888;
+    margin-top: 8px;
+  }
+  
+  .manager-description {
+    font-size: 1rem;
+    @include tablet {
+        font-size: 1rem;
+    }
+    @include laptop {
+        font-size: 1.2rem;
+    }
+    margin-top: 16px;
+  }
+  
+  /* 마우스를 올렸을 때 pointer 커서로 변경 */
+  .manager-card:hover {
+    cursor: pointer;
+  }

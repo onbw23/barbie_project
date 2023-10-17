@@ -1,0 +1,63 @@
+.custom-snackbar {
+    position: fixed;
+    // bottom: -100px;
+    bottom: 0;
+    left: 50%;
+    // transform: translateX(-50%);
+    transform: translateX(-50%) translateY(100%);
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 3rem;
+    width: 20rem;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    // transition: bottom 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  
+  .custom-snackbar.success {
+    background-color: rgba(76, 175, 80, 0.85);
+  }
+
+  .custom-snackbar.warning {
+    background-color: rgba(255, 87, 34, 0.85);
+  }
+
+  .custom-snackbar.error {
+    background-color: rgba(244, 67, 54, 0.85);
+  }
+  
+//   .custom-snackbar.open {
+//     bottom: 16px;
+//   }
+  
+//   .custom-snackbar.closed {
+//     bottom: -100px;
+//   }
+  .custom-snackbar.open {
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  .custom-snackbar.closed {
+    transform: translateX(-50%) translateY(100%);
+  }
+
+  .custom-snackbar.open {
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  .custom-snackbar.closed {
+    transform: translateX(-50%) translateY(100%);
+  }
+  
+  
+  .snackbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  

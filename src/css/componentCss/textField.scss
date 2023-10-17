@@ -1,0 +1,47 @@
+.custom-text-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .text-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .text-label {
+    width: 5em;
+    margin-right: 10px;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: color 0.3s; /* 애니메이션 효과를 주기 위해 추가 */
+  }
+  
+  .text-input.error {
+    // color: crimson; /* error일 때 색상을 변경 */
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: 20%;
+    left: 100%;
+    transform: translateX(-50%);
+    background-color: #333333c3;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    z-index: 1;
+    white-space: nowrap;
+    display: none;
+    font-size: 0.5em;
+  }
+  
+  .text-input.error ~ .tooltip {
+    display: block;
+  }
+  

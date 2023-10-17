@@ -1,3 +1,25 @@
+// Break Point
+$tablet: 768px;
+$laptop: 1020px;
+$desktop: 1400px;
+
+// Mixins
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+      @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: #{$laptop}) {
+        @content;
+    }
+} 
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
 .video-area {
     max-width: 1400px;
     margin: 0 auto;
@@ -18,11 +40,10 @@
 .title-page {
     display: table;
     table-layout: fixed;
-    height: 400px;
-    width: 100%;
-    padding:0.5% 0;
+    padding:0.5%;
+    margin: 2rem 0;
     font-size:1.25rem;
-    background-color:#fdf4ff;
+    // background-color:#fdf4ff;
     text-align:center;
     .title-item {
         display: table-cell;
@@ -52,10 +73,42 @@
     width: 100%;
     padding:0.5% 0;
     font-size:1.25rem;
-    background-color:#fff4f4;
+    // background-color:#fff4f4;
     text-align:center;
-    .contact-item {
-        display: table-cell;
-        vertical-align: middle;
+    // .contact-item {
+    //     display: table-cell;
+    //     vertical-align: middle;
+    // }
+}
+
+.contact-div {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // padding: 5px;
+    align-items: normal;
+    @include laptop() {
+        align-items: center;
     }
+}
+
+.contact-name {
+    width: 100px;
+    text-align: left;
+    padding-right: 5px;
+}
+
+.contact-item {
+    width: 20rem;
+    height: 50%;
+    display: flex;
+    // flex-wrap: wrap;
+    flex-direction: column;
+    // align-items: center;
+}
+
+.error-text {
+    font-size: 0.7rem;
+    color: crimson;
+    margin: 0;
 }

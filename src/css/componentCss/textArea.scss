@@ -1,0 +1,30 @@
+.custom-text-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .tall .text-area {
+    height: 5rem; /* 특정 입력 필드에 높이 변경 */
+    white-space: pre-line;
+  }
+  
+  .text-area {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+  }
+
+  .text-label {
+    width: 5em;
+    margin-right: 10px;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: color 0.3s; /* 애니메이션 효과를 주기 위해 추가 */
+  }
+  

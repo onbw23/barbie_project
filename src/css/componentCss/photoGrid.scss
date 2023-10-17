@@ -1,0 +1,121 @@
+// Break Point
+$tablet: 768px;
+$laptop: 1020px;
+$desktop: 1400px;
+
+// Mixins
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+      @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: #{$laptop}) {
+        @content;
+    }
+} 
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+  .photo-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 0 1rem 0;
+  }
+  
+  .photo-box {
+    width: calc(25% - 20px);
+    max-width: 300px; /* 최대 가로 크기 설정 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    display: flex; /* 추가: flex 컨테이너로 설정 */
+    align-items: center; /* 추가: 수직 가운데 정렬 */
+    justify-content: center; /* 추가: 수평 가운데 정렬 */
+  }
+  
+  .photo-box img {
+    max-width: 100%; /* 변경: width 대신 max-width 사용 */
+    max-height: 100%; /* 추가: 이미지가 컨테이너 크기를 넘지 않도록 */
+    display: block;
+    margin: auto; /* 추가: 수평 가운데 정렬 */
+    cursor: pointer;
+  }
+
+  .dialog-base {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dialog-btn { 
+    position: fixed;
+    top: 50%;
+    // font-size: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+      font-size: 2rem !important;
+    }
+    @include laptop {
+      width: 4rem;
+      height: 4rem;
+    }
+    padding: 0 !important;
+  }
+  .dialog-btn.prev {
+    left: 5%;
+  }
+  .dialog-btn.next { 
+    right: 5%;
+  }
+  .photo-dialog {
+    /* 모달창 크기 */
+    // height: 50%;
+    // max-height: calc(100% - 10rem);
+    width: 70%;
+    height: 90%;
+    // height: auto;
+    // max-width: 1400px;
+  
+    /* 최상단 위치 */
+    z-index: 999;
+    
+    /* 중앙 배치 */
+    /* top, bottom, left, right 는 브라우저 기준으로 작동한다. */
+    /* translate는 본인의 크기 기준으로 작동한다. */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    /* 모달창 디자인 */
+    // background-color: rgba(255, 255, 255, 0);
+    // border: 1px solid gray;
+    // border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    pointer-events: none; 
+  }
+  .photo-dialog-item {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+  }
